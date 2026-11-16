@@ -56,4 +56,11 @@ suit the minimum responsability principle:
 - Admin: Manages the whole platform.
 
 ## 5. Database
-We design the following E/R diagram
+We design the following E/R diagram for the database:
+![PiazzAD_DB_ER](Diagrams/DB_ER_schema.svg)
+
+
+## 6. Installation
+#TODO
+
+## 7. Thanks
