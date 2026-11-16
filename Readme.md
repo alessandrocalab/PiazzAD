@@ -1,39 +1,59 @@
 # PiazzAD
-Proponiamo questa soluzione ad alto livello tecnologico 
-per poter gestire cartelloni pubblicitari LED
+We propose this solution to managing and purchasing
+advertising space on digital billboards.
 
-## 1. Descrizione Funzionalità
-Il progetto si divide in due principali sezioni:
+## 1. Project Overview
+PiazzAD aims to connect advertiser with digital billboards
+through a web-based application.
 
-### 1. Area Clienti
-Potranno sottoscrivere abbonamenti e gestire, questi 
-permetteranno la gestione delle pubblicità che potrà 
-essere automatizzata, gestita dall'algoritmo di 
-scheduling oppure potranno decidere preferenze
-specifiche rispetto le possibilità concesse dalla
-sottoscrizione.
-
-Potranno acquistare direttamente dall'app
-la sottoscrizione con l'emissione della relativa 
-fattura, oppure possono procedere al pagamento 
-diretto all'amministratore.
-
-Potranno monitorare il traffico urbano vicino i
-cartelloni pubblicitari, determinare il numero
-di passagi dei veicoli e dei pedoni, conoscendo
-le fascie orarie più vivaci dove i veicoli sono
-maggiormente esposti alla pubblicità per i 
-rallentamenti dovuti al traffico.
-
-Sarà predisposta un'area di assistenza clienti
-tramite chat, con l'aiuto di un agente AI
-implementato in un servizio esterno all'applicazione
-
-I clienti potranno caricare i contenuti pubblicitari
-e controllore se sono stati approvati per la
-sponsorizzazione
+The platform is designed to:
+- User authentication and role managment.
+- Billboards registrations and managment.
+- Advertsing Campaign creation and scheduling.
+- Advertisement review and approval.
+- Order and payment managment.
+- Invoice managmnet.
+- Advertising statistics.
+- Show Pedestrian and veichle traffic analytics.
+- Auto Advertisement scheduling.
+- Administrative operation.
 
 
-### 2. Area Amministrativa
-Si compone di più ruoli, amministratori e moderatori,
-quest'ultimi gestiscono la revisione dei contenuti
+## 2. Technology Stack
+### Backend:
+    Python
+    FastAPI
+    SQLAlchemy
+    Alembic
+
+### Database:
+    PostgreSQL
+
+### Frontend:
+    HTML
+    CSS
+    JavaScript
+    Bootstrap
+
+### Communication Protocols:
+    HTTPS
+    #TODO aggiungere protoccolo per communicazione con cartellone
+
+### Dev Tools:
+    Git
+    GitHub
+
+## 3. Architeture
+#TODO
+
+## 4. User Roles
+Our system is based on different user roles, to 
+suit the minimum responsability principle:
+
+- Advertiser: creates and manages advertising campaigns.
+- Moderator: Review and approves advertisements.
+- Fiscal Staff: Manages the financial side of the application.
+- Admin: Manages the whole platform.
+
+## 5. Database
+We design the following E/R diagram
