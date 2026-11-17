@@ -2,7 +2,7 @@
 
 services:
   db:
-    image: postgres:18
+    image: postgres:18.7
     container_name: piazzaad-db
     restart: unless-stopped
 
@@ -12,7 +12,7 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Database password required}
 
     ports:
-      - "0.0.0.0:5432:5432" #TODO change with loopback in production
+      - "${POSTGRES_HOST}:${POSTGRES_PORT}:5432"
 
     volumes:
       - postgres_data:/var/lib/postgresql

@@ -1,2 +1,16 @@
+#enviroment
 .env
-.venv
+
+
+#python files
+__pycache__/
+.ruff_cache
+.venv/
+
+#editor files
+.vscode/
+
+
+#logs
+*.logs
+logs/
