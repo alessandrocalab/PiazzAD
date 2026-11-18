@@ -21,3 +21,13 @@ class BillboardCreate(BaseModel):
             max_length=BILLBOARD_NAME_MAX_NAME_LEN
         ) 
     address: Address
+
+
+class BillboardUpdate(BaseModel):
+    name:str | None = Field(
+                min_length=BILLBOARD_NAME_MIN_NAME_LEN,
+                max_length=BILLBOARD_NAME_MAX_NAME_LEN,
+                default=None
+        ) 
+    status: BillboardStatus | None = None #optional
+    address: Address | None = None 
