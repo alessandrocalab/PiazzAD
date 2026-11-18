@@ -55,9 +55,6 @@ def create_billboard(data: BillboardCreate):
 
 
 
-
-
-
 #UPdate billboard
 @router.patch(
     "/{billboard_name}",
