@@ -1,8 +1,10 @@
-#TODO adapt to database implementation
+# TODO adapt to database implementation
 from pydantic import BaseModel
-from app.schemas.Address import Address
+
+from app.schemas.Address import AddressResponse
+
 
 class BillboardResponse(BaseModel):
     name: str
     status: str
-    addres: Address
+    address: AddressResponse
