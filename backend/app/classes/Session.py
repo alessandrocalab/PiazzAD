@@ -11,7 +11,7 @@ class Session:
         self.session_db=session_db
 
 
-    def create_session(self, user_email)->str:
+    def create_session(self, user_id)->str:
 
         token=generate_session_token()
 

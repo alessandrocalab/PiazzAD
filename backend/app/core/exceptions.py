@@ -11,3 +11,15 @@ def ConflictError(message: str):
                     status_code=409,
                     detail=message
                 )
+
+def UnauthorizedError(message: str):
+    raise HTTPException(
+                        status_code=401,
+                        detail=message
+                    )
+
+def ForbbidendError(message: str):
+    raise HTTPException(
+                        status_code=403,
+                        detail=message
+                    )
