@@ -21,9 +21,41 @@ class Session:
 
         #save session
         self.session_db.create(
-            user_email,
+            user_id,
             token_hash,
             expires_at
         )
 
         return token
+
+    
+    def validate_session(self, token: str|None)->int|None:
+        
+        if not token:
+            return None
+        
+        token_hash=hash_session_token(token)
+        session=self.session_db.get_by_hash(token_hash)
+
+        if session is None:
+            return None
+
+        if session.revoked_at is not None:
+            return None
+        
+        if session.expires_at <= datetime.now(timezone.utc):
+            return None
+
+        return session.user_id
+
+    def revoke_session(self, token: str | None)->None:
+        
+        if not token:
+            return
+
+        token_hash = hash_session_token(token)
+
+        self.session_db.revoke_by_hash(
+            token_hash,
+            revoked_at=datetime.now(timezone.utc)
+        )

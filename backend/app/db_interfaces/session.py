@@ -4,7 +4,7 @@
 class SessionDBInterface:
     
     def create(
-        user_email: str,
+        user_id: str,
         token_hash: str, 
         expires_at
     ):
