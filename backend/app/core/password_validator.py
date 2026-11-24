@@ -2,12 +2,8 @@ import string
 from app.core.constants import PASSWORD_MIN_LEN, PASSWORD_MAX_LEN
 
 def validate_password(password: str)->str:
-    if len(password) < PASSWORD_MIN_LEN or len(password) > PASSWORD_MAX_LEN
-        raise ValueError(
-            f"Password length must 
-            be between {PASSWORD_MIN_LEN}
-            and {PASSWORD_MAX_LEN} characters"
-        )
+    if len(password) < PASSWORD_MIN_LEN or len(password) > PASSWORD_MAX_LEN:
+        raise ValueError(f"Password length must be between {PASSWORD_MIN_LEN} and {PASSWORD_MAX_LEN} characters")
     
     if not any(c.isupper() for c in password):
         raise ValueError("Password must contain an uppercase letter")
@@ -22,3 +18,7 @@ def validate_password(password: str)->str:
         raise ValueError("Password must contain a special character")
     
     return password
+
+
+if __name__ == "__main__":
+    print(validate_password("ciaoF23@dddd34"))

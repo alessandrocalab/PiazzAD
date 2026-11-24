@@ -1,8 +1,8 @@
 #TODO we should use a json file to load the settings
 
 #Billboard settings
-BILLBOARD_NAME_MAX_NAME_LEN=150
-BILLBOARD_NAME_MIN_NAME_LEN=1
+BILLBOARD_NAME_MAX_LEN=150
+BILLBOARD_NAME_MIN_LEN=1
 
 #Address settings
 ADDRESS_STREET_MAX_LEN=150
